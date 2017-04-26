@@ -72,8 +72,8 @@
 
         <li>
 
-            <a class="apidocElementLiA" href="#apidoc.element.write-json-file.sync">
-            function <span class="apidocSignatureSpan">write-json-file.</span>sync
+            <a class="apidocElementLiA" href="#apidoc.element.write-json-file.index">
+            function <span class="apidocSignatureSpan">write-json-file.</span>index
             <span class="apidocSignatureSpan">(fp, data, opts)</span>
             </a>
 
@@ -81,9 +81,31 @@
 
         <li>
 
-            <a class="apidocElementLiA" href="#apidoc.element.write-json-file.toString">
-            function <span class="apidocSignatureSpan">write-json-file.</span>toString
-            <span class="apidocSignatureSpan">()</span>
+            <a class="apidocElementLiA" href="#apidoc.element.write-json-file.sync">
+            function <span class="apidocSignatureSpan">write-json-file.</span>sync
+            <span class="apidocSignatureSpan">(fp, data, opts)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.write-json-file.index">module write-json-file.index</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.write-json-file.index.index">
+            function <span class="apidocSignatureSpan">write-json-file.</span>index
+            <span class="apidocSignatureSpan">(fp, data, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.write-json-file.index.sync">
+            function <span class="apidocSignatureSpan">write-json-file.index.</span>sync
+            <span class="apidocSignatureSpan">(fp, data, opts)</span>
             </a>
 
         </li>
@@ -99,6 +121,21 @@
     <h2>
         <a href="#apidoc.element.write-json-file.write-json-file" id="apidoc.element.write-json-file.write-json-file">
         function <span class="apidocSignatureSpan"></span>write-json-file
+        <span class="apidocSignatureSpan">(fp, data, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">(fp, data, opts) =&#x3e;
+	pify(mkdirp)(path.dirname(fp), {fs})
+		.then(() =&#x3e; main(pify(writeFileAtomic), fp, data, opts))</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.write-json-file.index" id="apidoc.element.write-json-file.index">
+        function <span class="apidocSignatureSpan">write-json-file.</span>index
         <span class="apidocSignatureSpan">(fp, data, opts)</span>
         </a>
     </h2>
@@ -137,18 +174,50 @@ module.exports.sync = (fp, data, opts) =&#x3e; {
     </ul>
 
 
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.write-json-file.index" id="apidoc.module.write-json-file.index">module write-json-file.index</a></h1>
+
 
     <h2>
-        <a href="#apidoc.element.write-json-file.toString" id="apidoc.element.write-json-file.toString">
-        function <span class="apidocSignatureSpan">write-json-file.</span>toString
-        <span class="apidocSignatureSpan">()</span>
+        <a href="#apidoc.element.write-json-file.index.index" id="apidoc.element.write-json-file.index.index">
+        function <span class="apidocSignatureSpan">write-json-file.</span>index
+        <span class="apidocSignatureSpan">(fp, data, opts)</span>
         </a>
     </h2>
     <ul>
-    <li>description and source-code<pre class="apidocCodePre">toString = function () {
-    return text;
-}</pre></li>
+    <li>description and source-code<pre class="apidocCodePre">(fp, data, opts) =&#x3e;
+	pify(mkdirp)(path.dirname(fp), {fs})
+		.then(() =&#x3e; main(pify(writeFileAtomic), fp, data, opts))</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.write-json-file.index.sync" id="apidoc.element.write-json-file.index.sync">
+        function <span class="apidocSignatureSpan">write-json-file.index.</span>sync
+        <span class="apidocSignatureSpan">(fp, data, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">(fp, data, opts) =&#x3e; {
+	mkdirp.sync(path.dirname(fp), {fs});
+	main(writeFileAtomic.sync, fp, data, opts);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+};
+
+module.exports = (fp, data, opts) =&#x3e;
+	pify(mkdirp)(path.dirname(fp), {fs})
+		.then(() =&#x3e; main(pify(writeFileAtomic), fp, data, opts));
+
+module.exports.sync = (fp, data, opts) =&#x3e; {
+	mkdirp.<span class="apidocCodeKeywordSpan">sync</span>(path.dirname(fp), {fs});
+	main(writeFileAtomic.sync, fp, data, opts);
+};
+...</pre></li>
     </ul>
 
 
