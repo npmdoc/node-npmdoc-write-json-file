@@ -1,6 +1,6 @@
 # npmdoc-write-json-file
 
-#### api documentation for  [write-json-file (v2.0.0)](https://github.com/sindresorhus/write-json-file#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-write-json-file.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-write-json-file) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-write-json-file.svg)](https://travis-ci.org/npmdoc/node-npmdoc-write-json-file)
+#### basic api documentation for  [write-json-file (v2.0.0)](https://github.com/sindresorhus/write-json-file#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-write-json-file.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-write-json-file) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-write-json-file.svg)](https://travis-ci.org/npmdoc/node-npmdoc-write-json-file)
 
 #### Stringify and write JSON to a file atomically
 
@@ -86,7 +86,8 @@
     "version": "2.0.0",
     "xo": {
         "esnext": true
-    }
+    },
+    "bin": {}
 }
 ```
 
